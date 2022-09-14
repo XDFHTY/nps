@@ -39,6 +39,7 @@ func main() {
 		common.PrintVersion()
 		return
 	}
+	// 替换 , common.GetRunPath(), 为 当前目录 , ".",
 	if err := beego.LoadAppConfig("ini", filepath.Join(common.GetRunPath(), "conf", "nps.conf")); err != nil {
 		log.Fatalln("load config file error", err.Error())
 	}
